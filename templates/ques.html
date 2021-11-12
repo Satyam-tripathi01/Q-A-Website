@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>QnA | Post Question</title>
+</head>
+<body>
+<a href="logout">Logout</a><br>
+<a href="ques">questions</a>
+<br><br>
+{% for i in ques %}
+
+<a href="answers?qid={{i.id}}">{{i.question}}</a><br>
+
+{% endfor %}
+
+</body>
+</html>

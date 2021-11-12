@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>QnA | Post Question</title>
+</head>
+<body>
+<a href="logout">Logout</a><br>
+<a href="ques">questions</a>
+
+<h1>{{kuchbhi.question}}</h1>
+
+{% for i in answers %}
+<font color="blue">Posted By {{i.c}}</font><br>
+{{i.b}}<br>
+{% endfor %}
+
+<br><br>
+<form action="addans" method="post">
+{% csrf_token %}
+<textarea placeholder="Type your Answer Here...." name="ans" rows="5" cols="50"></textarea>
+<input type="hidden" value="{{kuchbhi.id}}" name="qid">
+<br><input type="submit" value="Post Answer">
+</form>
+
+</body>
+</html>

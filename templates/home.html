@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>QnA | Post Question</title>
+</head>
+<body>
+<a href="logout">Logout</a><br>
+<a href="ques">questions</a>
+<h2>Post a question</h2>
+<form action="postq" method="post">
+{% csrf_token %}
+<textarea cols="50" name="question" required></textarea><br><br>
+<input type="submit" value="Post Question">
+</form>
+<font color="red">{{msg}}</font>
+</body>
+</html>
